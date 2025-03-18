@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "this is a Inventory app that based on the RESTAPI & Im dealing with only Data. & Checking the each functionality working or not im using the POSTMAN to check each Api",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +19,6 @@
   "homepage": "https://github.com/rwtabhii/InventoyApp#readme",
   "dependencies": {
     "express": "^4.21.2"
+    
   }
 }
