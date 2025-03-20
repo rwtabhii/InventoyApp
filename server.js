@@ -1,4 +1,4 @@
-import express, { urlencoded } from "express";
+import express from "express";
 import productRouter from "./feature/src/product/product-route.js";
 
 
