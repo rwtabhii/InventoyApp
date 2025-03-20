@@ -12,15 +12,15 @@ export default class ProductModel {
         return products;
     }
 
-     static findProduct(id){
-        const product = products.find(p=> p.id == id);
+    static findProduct(id) {
+        const product = products.find(p => p.id == id);
         return product;
 
     }
 
-    static  addProduct(data){
-        const newProduct  = new ProductModel(
-            products.length+1,
+    static addProduct(data) {
+        const newProduct = new ProductModel(
+            products.length + 1,
             data.name,
             data.desc,
             data.price,
@@ -28,7 +28,18 @@ export default class ProductModel {
         );
         console.log(newProduct);
         return products.push(newProduct);
-        
+
+    }
+
+    static filter(minPrice, maxPrice) {
+        // console.log("Min Price:", minPrice);
+        // console.log("Max Price:", maxPrice);
+    
+        const result = products.filter(product => {
+            return product.price >= minPrice && product.price <= maxPrice; // Correct price comparison
+        });
+    
+        return result;
     }
 }
 
@@ -38,14 +49,14 @@ var products = [
         1,
         'Product 1',
         'Description for Product 1',
-        19.99,
+        19,
         'https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg',
     ),
     new ProductModel(
         2,
         'Product 2',
         'Description for Product 2',
-        29.99,
+        29,
         'https://m.media-amazon.com/images/I/51xwGSNX-EL._SX356_BO1,204,203,200_.jpg',
     ),
     new ProductModel(
