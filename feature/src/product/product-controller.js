@@ -7,7 +7,7 @@ export class productController {
 
     getOneProduct(req, res) {
         const id = req.params.id;
-        const product =  ProductModel.oneProduct(id);
+        const product =  ProductModel.findProduct(id);
         if(!product){
             return res.status(404).send("Product is not found");
         }
@@ -15,5 +15,12 @@ export class productController {
             return res.status(200).send(product)
         }
     }
+     
+    addProduct(req,res){
+     ProductModel.addProduct(req.body);
+     const products = ProductModel.getAllProducts()
+     return res.status(201).send(products);
+    }
+
 
 }

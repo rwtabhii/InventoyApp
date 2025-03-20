@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import productRouter from "./feature/src/product/product-route.js";
 
 
@@ -6,6 +6,7 @@ import productRouter from "./feature/src/product/product-route.js";
 
 
 const server = express();
+server.use(express.json()); 
 server.use("/api/products",productRouter);
 
 
