@@ -1,5 +1,9 @@
-Product Api's
+Product Api's :-
 1. Get Products
 2. Add Product
 3. Filter the Product
 4. Get One Product
+
+User Api's :-
+1. signin
+2. signup

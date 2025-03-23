@@ -12,10 +12,4 @@ productRouter.post("/",productcontroller.addProduct);
 
 
 
-
-
-
-
-
-
-export default productRouter;
+export default  productRouter;
