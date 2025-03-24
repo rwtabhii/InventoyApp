@@ -26,4 +26,4 @@ export class userModel {
 }
 
 
-const users = [];
+export const users = [];
