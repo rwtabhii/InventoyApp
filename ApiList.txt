@@ -7,3 +7,11 @@ Product Api's :-
 User Api's :-
 1. signin
 2. signup
+
+Authentication :-
+Choose any one from these...
+1. basic Authentication
+2. Jwt Authentication ==  (we can also generate the secret key from the CRYPTO package of node js  it is very secured)
+
+
+
