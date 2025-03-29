@@ -7,10 +7,12 @@ import jwtAuth from "./feature/src/middlware/jwtAuthentication.js";
 
 
 
+
 const server = express();
 server.use(express.json());
 server.use("/api/products", jwtAuth, productRouter);
 server.use("/api/user", userRouter)
+
 
 
 

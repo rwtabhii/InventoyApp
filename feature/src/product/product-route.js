@@ -10,6 +10,7 @@ productRouter.get("/filter",productcontroller.filterProduct);
 productRouter.get("/",productcontroller.getAllProduct);
 productRouter.get("/:id",productcontroller.getOneProduct);
 productRouter.post("/",productcontroller.addProduct);
+productRouter.post("/rating",productcontroller.rating)
 
 
 
