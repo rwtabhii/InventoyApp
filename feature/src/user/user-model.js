@@ -1,9 +1,10 @@
 export class userModel {
-    constructor(id, name, email, password) {
+    constructor(id, name, email, password,type) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.type = type;
     }
 
     static signup(data) {
@@ -26,4 +27,21 @@ export class userModel {
 }
 
 
-export const users = [];
+export const users = [
+    {
+        id:1,
+        name:"seller",
+        email: "seller@gmail.com",
+        password:123,
+        type:"seller"
+
+    },
+    {
+        id:2,
+        name:"customer",
+        email: "customer@gmail.com",
+        password:123,
+        type:"customer"
+
+    }
+];
