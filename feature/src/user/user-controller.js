@@ -22,6 +22,7 @@ export class userController {
          // 1. create token
          const token = jwt.sign({ userId: user.id, email: user.email }, "wahnaqNcsZD8ft6jt3P7kgzPT3S6ukuk",
              { expiresIn: "1h" });
+             req.userId = user.id;
          return res.status(201).send(token);
       }
 
