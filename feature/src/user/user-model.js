@@ -40,7 +40,7 @@ export const users = [
         id:2,
         name:"customer",
         email: "customer@gmail.com",
-        password:123,
+        password:"pass1",
         type:"customer"
 
     }
