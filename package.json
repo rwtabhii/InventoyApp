@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rwtabhii/InventoyApp#readme",
   "dependencies": {
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1"
   }
 }

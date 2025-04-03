@@ -1,0 +1,71 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "Api's for our Ecom application",
+        "title": "Ecom Api's"
+    },
+    "host": "localhost:3200",
+    "securityDefinitions": {
+        "JWT": {
+            "in": "header",
+            "name": "Authorization",
+            "type": "apiKey"
+        }
+    },
+    "paths": {
+        "/api/products": {
+            "get": {
+                "tags":["Products"],
+                "summary": "products",
+                "description": "Get all the products",
+                "security": [
+                    {
+                        "JWT": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/user/signin": {
+            "post": {
+                "tags": ["User LogIn"],
+                "summary": "LogIn",
+                "description": "User login to get token",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "User Credintial",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Incorret Credintial"
+                    }
+                }
+            }
+        }
+    }
+}

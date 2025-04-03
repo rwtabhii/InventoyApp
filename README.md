@@ -16,3 +16,7 @@ Choose any one from these...
 Rating the Product:-
 1. adding the rating in the products.
 2. if ratinng exist the update the rating.
+
+For the Swagger .
+1. firstly install the package : npm install swagger-ui-express.
+2.
