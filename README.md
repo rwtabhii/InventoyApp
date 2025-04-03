@@ -19,4 +19,5 @@ Rating the Product:-
 
 For the Swagger .
 1. firstly install the package : npm install swagger-ui-express.
-2.
+2. Then we make the Api docs folder and inside it there is swagger.json file.
+3. then import the necessary module in the server.js file 
