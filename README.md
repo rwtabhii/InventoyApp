@@ -23,4 +23,5 @@ Choose any one from these...
 3. then import the necessary module in the server.js file 
 
 # CORS.(cross origin resource sharing) we can do this manually as well as using the liberary:-
-  1. add 
+  1. add necessary thing in server.js file you can see the detail there.
+  2. if you wanna use CORS through liberary just install and use.
