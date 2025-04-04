@@ -14,7 +14,7 @@ import fs from "fs";
 
 const server = express();
 server.use(express.json());
-const apidocs = JSON.parse(fs.readFileSync("./ApiDocs/swagger.json", "utf8"));
+const apidocs = JSON.parse(fs.readFileSync("./ApiDocs/swagger3.0.json", "utf8"));
 server.use("/api-docs",swagger.serve ,swagger.setup(apidocs));
 server.use("/api/products", jwtAuth, productRouter);
 server.use("/api/user", userRouter)
