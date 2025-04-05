@@ -4,8 +4,10 @@ import userRouter from "./feature/src/user/user-route.js"
 // import { basicAuth } from "./feature/src/middlware/basicauthentication.js";
 import jwtAuth from "./feature/src/middlware/jwtAuthentication.js";
 import swagger from "swagger-ui-express";
+import cors from "cors";
 // import apidocs from "./ApiDocs/swagger.json" assert {type : "json"};   // if it doesnotwork do another one down below//
 import fs from "fs";
+import loggerMiddleware from "./feature/src/middlware/logger.middleware.js";
 
 
 
@@ -38,6 +40,7 @@ server.use(cors(corsOption));
 server.use(express.json());
 const apidocs = JSON.parse(fs.readFileSync("./ApiDocs/swagger3.0.json", "utf8"));
 server.use("/api-docs", swagger.serve, swagger.setup(apidocs));
+server.use(loggerMiddleware);
 server.use("/api/products", jwtAuth, productRouter);
 server.use("/api/user", userRouter);
 
