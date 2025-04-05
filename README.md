@@ -25,3 +25,6 @@ Choose any one from these...
 # CORS.(cross origin resource sharing) we can do this manually as well as using the liberary:-
   1. add necessary thing in server.js file you can see the detail there.
   2. if you wanna use CORS through liberary just install and use.
+
+# logger middleware manually /with Liberary
+1. mannualy using the fs module to log the detail of the users
