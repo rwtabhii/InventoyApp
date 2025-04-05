@@ -31,4 +31,4 @@ Choose any one from these...
 
 # logger middleware manually /with Liberary
 1. mannualy using the fs module to log the detail of the users
-2. (npm install winston)  it is a liberary that do everything we have to just set the some details.
+2. (npm install winston)  it is a liberary that do everything we have to just set the some details
