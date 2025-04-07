@@ -8,6 +8,7 @@ import cors from "cors";
 // import apidocs from "./ApiDocs/swagger.json" assert {type : "json"};   // if it doesnotwork do another one down below//
 import fs from "fs";
 import loggerMiddleware from "./feature/src/middlware/logger.middleware.js";
+import { ApplicationError } from "./feature/src/middlware/errorHandling.js";
 
 
 
@@ -45,6 +46,15 @@ server.use("/api/products", jwtAuth, productRouter);
 server.use("/api/user", userRouter);
 
 
+// error handling middleware
+server.use((err,req,res,next)=>{
+    console.log(err);
+    if(err instanceof ApplicationError){
+        return res.status(err.code).send(err.message)
+    }
+
+    return res.status(500).send("something went wrong with the database");
+})
 
 
 
