@@ -1,6 +1,7 @@
 import express from "express";
 import productRouter from "./feature/src/product/product-route.js";
 import userRouter from "./feature/src/user/user-route.js"
+import cartRouter from "./feature/src/cart/cart.route.js";
 // import { basicAuth } from "./feature/src/middlware/basicauthentication.js";
 import jwtAuth from "./feature/src/middlware/jwtAuthentication.js";
 import swagger from "swagger-ui-express";
@@ -44,6 +45,8 @@ server.use("/api-docs", swagger.serve, swagger.setup(apidocs));
 server.use(loggerMiddleware);
 server.use("/api/products", jwtAuth, productRouter);
 server.use("/api/user", userRouter);
+server.use("/api/cart",jwtAuth,cartRouter);
+=======
 
 
 // error handling middleware
